@@ -1,0 +1,21 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.16}
+\caption{Scenario-specific model-selection guidance. Recommendations are conditional and do not turn any baseline into a proposed algorithm.}
+\label{tab:model-selection-guidance}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}p{0.14\linewidth}>{\RaggedRight\arraybackslash}p{0.29\linewidth}>{\RaggedRight\arraybackslash}X@{}}
+\toprule
+Scenario & Recommended strategy & Main caution \\
+\midrule
+label-rich & Framework-Balanced or Fixed-LightGBM & Do not claim broad dominance; differences are small. \\
+label-scarce & Fixed-LightGBM with validation-only threshold; Framework-Balanced when multiple candidates are available & Normal-only and 5\% settings remain weak; avoid overclaiming. \\
+safety-critical & Framework-Safety & FAR increases substantially, so alarm workflow must tolerate more warnings. \\
+low false alarm & Framework-Low-False-Alarm & MDR increases; not suitable where missed detections dominate. \\
+domain shift & Fixed-LightGBM or cost-specific framework strategy & Framework does not uniformly beat LightGBM under domain shift. \\
+missing sensor & Framework-Robust or Framework-Balanced & Needs deployment-time validation for exact missing-sensor pattern. \\
+low-latency candidate selection & Fixed-LightGBM or Fixed-XGBoost & Feature extraction cost must be included in real deployment. \\
+\bottomrule
+\end{tabularx}
+\end{table}

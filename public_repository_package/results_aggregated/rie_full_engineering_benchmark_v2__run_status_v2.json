@@ -1,0 +1,31 @@
+{
+  "status": "FULL_RUN_COMPLETE",
+  "readiness_score": 5,
+  "manuscript_planning": "YES",
+  "all_jobs": {
+    "total": 1305,
+    "completed": 745,
+    "failed": 380,
+    "skipped": 180
+  },
+  "core_required": {
+    "total": 745,
+    "completed": 745,
+    "failed": 0,
+    "skipped": 0
+  },
+  "core_required_completion_rate": 1.0,
+  "optional_secondary": {
+    "total": 150,
+    "completed": 0,
+    "failed": 0,
+    "skipped": 150
+  },
+  "historical_reference": {
+    "total": 275,
+    "completed": 0,
+    "failed": 245,
+    "skipped": 30
+  },
+  "generated_at": "2026-06-05T11:44:38+00:00"
+}

@@ -1,0 +1,170 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{Chandola2009Survey}
+V.~Chandola, A.~Banerjee, V.~Kumar, Anomaly detection: A survey, ACM Computing
+  Surveys 41~(3) (2009) 15:1--15:58.
+\newblock \href {https://doi.org/10.1145/1541880.1541882}
+  {\path{doi:10.1145/1541880.1541882}}.
+
+\bibitem{Pimentel2014NoveltyDetection}
+M.~A.~F. Pimentel, D.~A. Clifton, L.~Clifton, L.~Tarassenko, A review of
+  novelty detection, Signal Processing 99 (2014) 215--249.
+\newblock \href {https://doi.org/10.1016/j.sigpro.2013.12.026}
+  {\path{doi:10.1016/j.sigpro.2013.12.026}}.
+
+\bibitem{BlazquezGarcia2021TimeSeriesSurvey}
+A.~Bl\'{a}zquez-Garc\'{i}a, A.~Conde, U.~Mori, J.~A. Lozano, A review on
+  outlier/anomaly detection in time series data, ACM Computing Surveys 54~(3)
+  (2021) 56:1--56:33.
+\newblock \href {https://doi.org/10.1145/3444690} {\path{doi:10.1145/3444690}}.
+
+\bibitem{Narayanan2018IndustrialArm}
+V.~Narayanan, R.~B. Bobba, Learning based anomaly detection for industrial arm
+  applications, in: Proceedings of the 2018 Workshop on Cyber-Physical Systems
+  Security and Privacy, 2018, pp. 13--23.
+\newblock \href {https://doi.org/10.1145/3264888.3264894}
+  {\path{doi:10.1145/3264888.3264894}}.
+
+\bibitem{Augusti2024IMADDS}
+F.~Augusti, D.~Albertini, K.~Esmer, R.~Sannino, A.~Bernardini,
+  \href{https://zenodo.org/records/12665499}{Imad-ds: A dataset for industrial
+  multi-sensor anomaly detection under domain shift conditions} (2024).
+\newblock \href {https://doi.org/10.5281/zenodo.12665499}
+  {\path{doi:10.5281/zenodo.12665499}}.
+\newline\urlprefix\url{https://zenodo.org/records/12665499}
+
+\bibitem{Gaiardelli2023RoAD}
+S.~Gaiardelli, N.~Dall'Ora, F.~Fummi,
+  \href{https://iris.univr.it/handle/11562/1114585}{Robotic arm dataset (road):
+  A dataset to support the design and test of machine learning-driven anomaly
+  detection in a production line} (2023).
+\newline\urlprefix\url{https://iris.univr.it/handle/11562/1114585}
+
+\bibitem{Malhotra2016LSTMEncDec}
+P.~Malhotra, A.~Ramakrishnan, G.~Anand, L.~Vig, P.~Agarwal, G.~Shroff,
+  \href{https://arxiv.org/abs/1607.00148}{Lstm-based encoder-decoder for
+  multi-sensor anomaly detection} (2016).
+\newblock \href {http://arxiv.org/abs/1607.00148} {\path{arXiv:1607.00148}}.
+\newline\urlprefix\url{https://arxiv.org/abs/1607.00148}
+
+\bibitem{Audibert2020USAD}
+J.~Audibert, P.~Michiardi, F.~Guyard, S.~Marti, M.~A. Zuluaga,
+  \href{https://ds.eurecom.fr/publication/audibertmgmz20/}{Usad: Unsupervised
+  anomaly detection on multivariate time series}, in: KDD 2020, 2020, pp.
+  3395--3404.
+\newline\urlprefix\url{https://ds.eurecom.fr/publication/audibertmgmz20/}
+
+\bibitem{Ke2017LightGBM}
+G.~Ke, Q.~Meng, T.~Finley, T.~Wang, W.~Chen, W.~Ma, Q.~Ye, T.-Y. Liu,
+  \href{https://papers.nips.cc/paper/6907-lightgbm-a-highly-efficient-gradient-boosting-decision-tree}{Lightgbm:
+  A highly efficient gradient boosting decision tree}, in: Advances in Neural
+  Information Processing Systems, Vol.~30, 2017, pp. 3146--3154.
+\newline\urlprefix\url{https://papers.nips.cc/paper/6907-lightgbm-a-highly-efficient-gradient-boosting-decision-tree}
+
+\bibitem{Chen2016XGBoost}
+T.~Chen, C.~Guestrin, Xgboost: A scalable tree boosting system, in: Proceedings
+  of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and
+  Data Mining, 2016, pp. 785--794.
+\newblock \href {https://doi.org/10.1145/2939672.2939785}
+  {\path{doi:10.1145/2939672.2939785}}.
+
+\bibitem{Breiman2001RandomForests}
+L.~Breiman, Random forests, Machine Learning 45 (2001) 5--32.
+\newblock \href {https://doi.org/10.1023/A:1010933404324}
+  {\path{doi:10.1023/A:1010933404324}}.
+
+\bibitem{Liu2008IsolationForest}
+F.~T. Liu, K.~M. Ting, Z.-H. Zhou, Isolation forest, in: 2008 Eighth IEEE
+  International Conference on Data Mining, 2008, pp. 413--422.
+\newblock \href {https://doi.org/10.1109/ICDM.2008.17}
+  {\path{doi:10.1109/ICDM.2008.17}}.
+
+\bibitem{Liu2012IsolationBased}
+F.~T. Liu, K.~M. Ting, Z.-H. Zhou, Isolation-based anomaly detection, ACM
+  Transactions on Knowledge Discovery from Data 6~(1) (2012) 1--39.
+\newblock \href {https://doi.org/10.1145/2133360.2133363}
+  {\path{doi:10.1145/2133360.2133363}}.
+
+\bibitem{Guo2017Calibration}
+C.~Guo, G.~Pleiss, Y.~Sun, K.~Q. Weinberger,
+  \href{https://proceedings.mlr.press/v70/guo17a.html}{On calibration of modern
+  neural networks}, in: Proceedings of the 34th International Conference on
+  Machine Learning, Vol.~70 of Proceedings of Machine Learning Research, PMLR,
+  2017, pp. 1321--1330.
+\newline\urlprefix\url{https://proceedings.mlr.press/v70/guo17a.html}
+
+\bibitem{Wu2021TSADBenchmarksFlawed}
+R.~Wu, E.~J. Keogh, Current time series anomaly detection benchmarks are flawed
+  and are creating the illusion of progress, IEEE Transactions on Knowledge and
+  Data Engineering 35~(3) (2023) 2421--2429.
+\newblock \href {https://doi.org/10.1109/TKDE.2021.3112126}
+  {\path{doi:10.1109/TKDE.2021.3112126}}.
+
+\bibitem{Tatbul2018PrecisionRecallTS}
+N.~Tatbul, T.~J. Lee, S.~Zdonik, M.~Alam, J.~Gottschlich, Precision and recall
+  for time series, in: Advances in Neural Information Processing Systems,
+  Vol.~31, 2018, pp. 1924--1934.
+
+\bibitem{Vovk2005Conformal}
+V.~Vovk, A.~Gammerman, G.~Shafer, Algorithmic Learning in a Random World,
+  Springer, 2005.
+\newblock \href {https://doi.org/10.1007/b106715} {\path{doi:10.1007/b106715}}.
+
+\bibitem{Lei2018Conformal}
+J.~Lei, M.~G'Sell, A.~Rinaldo, R.~J. Tibshirani, L.~Wasserman,
+  Distribution-free predictive inference for regression, Journal of the
+  American Statistical Association 113~(523) (2018) 1094--1111.
+\newblock \href {https://doi.org/10.1080/01621459.2017.1307116}
+  {\path{doi:10.1080/01621459.2017.1307116}}.
+
+\bibitem{Sokolova2009PerformanceMeasures}
+M.~Sokolova, G.~Lapalme, A systematic analysis of performance measures for
+  classification tasks, Information Processing \& Management 45~(4) (2009)
+  427--437.
+\newblock \href {https://doi.org/10.1016/j.ipm.2009.03.002}
+  {\path{doi:10.1016/j.ipm.2009.03.002}}.
+
+\bibitem{Elkan2001CostSensitive}
+C.~Elkan, The foundations of cost-sensitive learning, in: Proceedings of the
+  Seventeenth International Joint Conference on Artificial Intelligence, 2001,
+  pp. 973--978.
+
+\bibitem{Drummond2006CostCurves}
+C.~Drummond, R.~C. Holte, Cost curves: An improved method for visualizing
+  classifier performance, Machine Learning 65~(1) (2006) 95--130.
+\newblock \href {https://doi.org/10.1007/s10994-006-8199-5}
+  {\path{doi:10.1007/s10994-006-8199-5}}.
+
+\bibitem{Sculley2015TechnicalDebt}
+D.~Sculley, G.~Holt, D.~Golovin, E.~Davydov, T.~Phillips, D.~Ebner,
+  V.~Chaudhary, M.~Young, J.-F. Crespo, D.~Dennison,
+  \href{https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems}{Hidden
+  technical debt in machine learning systems}, in: Advances in Neural
+  Information Processing Systems, Vol.~28, 2015, pp. 2503--2511.
+\newline\urlprefix\url{https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems}
+
+\bibitem{Breck2017MLTestScore}
+E.~Breck, S.~Cai, E.~Nielsen, M.~Salib, D.~Sculley,
+  \href{https://research.google/pubs/the-ml-test-score-a-rubric-for-ml-production-readiness-and-technical-debt-reduction/}{The
+  ml test score: A rubric for ml production readiness and technical debt
+  reduction}, in: 2017 IEEE International Conference on Big Data, IEEE, 2017,
+  pp. 1123--1132.
+\newblock \href {https://doi.org/10.1109/BigData.2017.8258038}
+  {\path{doi:10.1109/BigData.2017.8258038}}.
+\newline\urlprefix\url{https://research.google/pubs/the-ml-test-score-a-rubric-for-ml-production-readiness-and-technical-debt-reduction/}
+
+\bibitem{Amershi2019SE4ML}
+S.~Amershi, A.~Begel, C.~Bird, R.~DeLine, H.~Gall, E.~Kamar, N.~Nagappan,
+  B.~Nushi, T.~Zimmermann, Software engineering for machine learning: A case
+  study, in: 2019 IEEE/ACM 41st International Conference on Software
+  Engineering: Software Engineering in Practice (ICSE-SEIP), 2019, pp.
+  291--300.
+\newblock \href {https://doi.org/10.1109/ICSE-SEIP.2019.00042}
+  {\path{doi:10.1109/ICSE-SEIP.2019.00042}}.
+
+\end{thebibliography}

@@ -1,0 +1,9 @@
+item,path,exists
+Full metric summary,/home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/rie_full_engineering_benchmark_v2/full_metric_summary_v2.csv,True
+Framework statistical comparison,/home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/framework_strategy_validation_gate_v1/statistical_comparison.csv,True
+Framework strategy selection log,/home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/framework_strategy_validation_gate_v1/strategy_selection_log.csv,True
+FAR/MDR constraint table,/home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/rie_results_packaging_review_figures_gate_v1/far_mdr_constraint_table.csv,True
+Label-budget table,/home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/rie_results_packaging_review_figures_gate_v1/label_efficiency_table_final.csv,True
+Robustness/domain-shift table,/home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/rie_results_packaging_review_figures_gate_v1/robustness_table_final.csv,True
+Latency/deployment table,/home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/rie_results_packaging_review_figures_gate_v1/latency_deployment_table_final.csv,True
+Engineering utility table,/home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/rie_results_packaging_review_figures_gate_v1/engineering_utility_table.csv,True

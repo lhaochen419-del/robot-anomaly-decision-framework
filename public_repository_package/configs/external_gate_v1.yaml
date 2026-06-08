@@ -1,0 +1,56 @@
+project:
+  name: robot_cirfl_external_data_gate_v1
+  stage: external_data_gate_v1_best_path_freeze
+  output_dir: outputs/external_data_gate_v1
+  run_full_experiments: false
+  generate_figures: false
+  real_only: true
+seeds:
+- 7
+- 13
+- 23
+device: auto_fastest
+review_packet:
+  output_dir: progress_for_chatgpt/latest
+  generate_figures: false
+road_reference:
+  selected_reference: CIRFL_v3
+  reference_note: CIRFL_v3 is frozen as the current RoAD algorithm reference; v3 plain residual is retained as a strong detector comparator, not renamed as CIRFL.
+external_datasets:
+  imadds_robotic_arm:
+    priority: 1
+    status: NEED_DATA
+    official_source: https://zenodo.org/records/12665499
+    doi: https://doi.org/10.5281/zenodo.12665499
+    file: RoboticArm.7z
+    expected_size_bytes: 3545453763
+    checksum: md5:a64498b7dcc297946a7fb8366e38ba33
+    raw_dir: data/raw/imadds/RoboticArm
+    processed_csv: data/processed/imadds_robotic_arm/imadds_robotic_arm_unified.csv
+  nist_ur:
+    priority: 2
+    status: NEED_DATA
+    official_source: https://doi.org/10.18434/M31962
+    raw_dir: data/raw/nist_ur
+    processed_csv: data/processed/nist_ur/nist_ur_unified.csv
+  kuka_torque:
+    priority: 3
+    status: NEED_DATA
+    official_source: https://zenodo.org/records/6461868
+    raw_dir: data/raw/kuka_torque
+    processed_csv: data/processed/kuka_torque/kuka_torque_unified.csv
+external_gate_protocol_templates:
+  imadds_main_binary:
+    goal: normal_vs_anomaly
+    split_unit: segment_id_or_file_id
+    status: NEED_DATA
+  imadds_cross_domain:
+    goal: source_domain_train_target_domain_test
+    split_unit: source_target_domain_and_segment_id
+    status: NEED_DATA
+  imadds_sensor_missing:
+    goal: robustness_template_10_20_percent_missing_channels
+    status: TEMPLATE_ONLY
+  cross_dataset_transfer:
+    goal: RoAD_to_IMAD_DS_and_reverse_feasibility
+    status: TEMPLATE_ONLY

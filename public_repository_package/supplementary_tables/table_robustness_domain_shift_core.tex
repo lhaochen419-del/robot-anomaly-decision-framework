@@ -1,0 +1,20 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.4pt}
+\renewcommand{\arraystretch}{1.05}
+\caption{Core robustness and domain-shift results. Robustness and domain shift are reported separately because the framework audits domain-shift risk rather than solving it.}
+\label{tab:robustness-domain-core}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}p{0.16\linewidth}>{\RaggedRight\arraybackslash}X*{5}{>{\centering\arraybackslash}p{0.075\linewidth}}@{}}
+\toprule
+Group & Strategy & Macro-F1 & PR-AUC & FAR & MDR & Utility \\
+\midrule
+robustness & Fixed-LightGBM & 0.834 & 0.916 & 0.171 & 0.160 & 0.503 \\
+robustness & Framework-Balanced & 0.839 & 0.919 & 0.173 & 0.148 & 0.518 \\
+robustness & Framework-Robust & 0.839 & 0.919 & 0.173 & 0.149 & 0.517 \\
+domain shift & Fixed-LightGBM & 0.631 & 0.768 & 0.225 & 0.443 & -0.037 \\
+domain shift & Framework-Balanced & 0.615 & 0.758 & 0.205 & 0.477 & -0.067 \\
+domain shift & Framework-Robust & 0.615 & 0.758 & 0.205 & 0.477 & -0.067 \\
+\bottomrule
+\end{tabularx}
+\end{table}

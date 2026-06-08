@@ -1,0 +1,21 @@
+\begin{table}[!htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\caption{Application scenario mapping for deployment-oriented strategy selection. Recommendations are derived from validation-calibrated strategy behavior and should be checked against local operating costs before deployment.}
+\label{tab:application-scenario}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}p{0.20\linewidth}>{\RaggedRight\arraybackslash}p{0.19\linewidth}>{\RaggedRight\arraybackslash}p{0.21\linewidth}>{\RaggedRight\arraybackslash}p{0.16\linewidth}>{\RaggedRight\arraybackslash}X@{}}
+\toprule
+Deployment scenario & Operational priority & Recommended strategy & Main monitored metric & Caveat \\
+\midrule
+Safety-critical monitoring & Reduce missed detections & Framework-Safety & MDR and safety utility & FAR increases and alarm handling must be feasible \\
+Low false-alarm production line & Reduce nuisance alarms & Framework-Low-False-Alarm & FAR and low-false-alarm utility & MDR increases and residual risk must be accepted \\
+Label-rich validation & Balanced detection quality & Fixed-LightGBM or Framework-Balanced & macro-F1, PR-AUC, FAR/MDR & Framework does not dominate LightGBM \\
+Label-scarce monitoring & Usable calibration with limited labels & Fixed-LightGBM with validation-only threshold when labels exist & label-budget sensitivity & Label-efficiency superiority was not established \\
+Missing-sensor or noisy monitoring & Robust operation under corrupted inputs & Framework-Robust or Framework-Balanced & robustness utility and degradation & Validation should include similar corruption \\
+Domain-shift deployment & Transfer across operating conditions & Fixed-LightGBM or cost-specific framework strategy & domain-shift gap & No broad robustness superiority claim \\
+Low-latency candidate selection & Prepared-input latency screening & Fixed-LightGBM or Fixed-XGBoost & prepared-input latency and deployment utility & Candidate selection only; end-to-end robot-cell timing remains required \\
+\bottomrule
+\end{tabularx}
+\end{table}

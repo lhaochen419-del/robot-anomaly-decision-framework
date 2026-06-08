@@ -1,0 +1,15 @@
+project:
+  name: robot_cirfl_real_gate_combined
+  stage: real_data_gate_v1
+  output_dir: outputs/real_gate_combined
+  real_data_available: false
+
+included_configs:
+  - configs/real_gate_road.yaml
+  - configs/real_gate_imadds.yaml
+
+gate_policy:
+  do_not_run_full_experiments: true
+  require_real_dataset: true
+  require_real_cross_condition: true
+  forbid_synthetic_as_evidence: true

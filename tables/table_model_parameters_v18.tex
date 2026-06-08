@@ -1,0 +1,21 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3.2pt}
+\renewcommand{\arraystretch}{1.08}
+\caption{Candidate model settings used in the reproducible benchmark implementation. The settings define baseline configurations for model-threshold evaluation rather than optimized architecture claims.}
+\label{tab:model-parameters}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}p{0.18\linewidth}>{\RaggedRight\arraybackslash}p{0.46\linewidth}>{\RaggedRight\arraybackslash}p{0.16\linewidth}>{\RaggedRight\arraybackslash}X@{}}
+\toprule
+Model & Main reported settings & Input representation & Training note \\
+\midrule
+LightGBM & 70 estimators; learning rate 0.06; 31 leaves & Window-level statistical features & Supervised tree baseline \\
+XGBoost & 60 estimators; maximum depth 4; learning rate 0.06; subsampling 0.9; column subsampling 0.9; histogram tree construction & Window-level statistical features & Supervised tree baseline \\
+RandomForest & 80 trees; maximum depth 10; balanced class weights & Window-level statistical features & Supervised tree baseline \\
+IsolationForest & 80 trees & Window-level statistical features & Unsupervised anomaly baseline \\
+AutoEncoder & Hidden dimension 64; latent dimension 24; AdamW; learning rate $10^{-3}$; three epochs; batch size 128 & Normalized multivariate windows & Reconstruction baseline; no early-stopping rule explicitly configured \\
+LSTM-AE & Hidden dimension 32; latent dimension 20; AdamW; learning rate $10^{-3}$; three epochs; batch size 128 & Normalized multivariate windows & Sequence reconstruction baseline; no early-stopping rule explicitly configured \\
+USAD & Hidden dimension 80; latent dimension 24; AdamW; learning rate $10^{-3}$; three epochs; batch size 128 & Normalized multivariate windows & Reconstruction baseline; no early-stopping rule explicitly configured \\
+\bottomrule
+\end{tabularx}
+\end{table}

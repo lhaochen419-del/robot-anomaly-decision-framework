@@ -1,0 +1,22 @@
+# Figure Generation Report
+
+- generated_at: 2026-06-05T15:45:06+00:00
+- output_path: /home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/rie_results_packaging_review_figures_gate_v1
+- source_type: real
+- synthetic: NO
+
+- generated review-only PNG figures: 8
+- formal submission figures: NO
+- all figures use real benchmark/strategy output CSV files.
+- no synthetic result was used.
+- figure files are placed in figures/.
+| figure | data_source | note | generated_at | output_path |
+| --- | --- | --- | --- | --- |
+| fig_strategy_average_rank.png | rank_detail.csv | Average rank by utility; review-only | 2026-06-05T15:45:06+00:00 | /home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/rie_results_packaging_review_figures_gate_v1 |
+| fig_strategy_regret.png | regret_analysis.csv | Mean macro-F1 regret; Oracle-Best-Test is theoretical only | 2026-06-05T15:45:06+00:00 | /home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/rie_results_packaging_review_figures_gate_v1 |
+| fig_engineering_utility_comparison.png | engineering_utility_results.csv | Utility matrix | 2026-06-05T15:45:06+00:00 | /home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/rie_results_packaging_review_figures_gate_v1 |
+| fig_far_mdr_constraint_violation.png | far_mdr_constraint_table.csv | Constraint violation rates | 2026-06-05T15:45:06+00:00 | /home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/rie_results_packaging_review_figures_gate_v1 |
+| fig_label_efficiency_strategy.png | label_efficiency_table_final.csv | Macro-F1 by label budget | 2026-06-05T15:45:06+00:00 | /home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/rie_results_packaging_review_figures_gate_v1 |
+| fig_robustness_strategy.png | robustness_table_final.csv | Robustness and domain-shift utility | 2026-06-05T15:45:06+00:00 | /home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/rie_results_packaging_review_figures_gate_v1 |
+| fig_latency_deployment_tradeoff.png | latency_deployment_table_final.csv | Latency vs deployment utility | 2026-06-05T15:45:06+00:00 | /home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/rie_results_packaging_review_figures_gate_v1 |
+| fig_framework_strategy_map.png | strategy_selection_log.csv | Most frequently selected model by framework strategy and scenario group | 2026-06-05T15:45:06+00:00 | /home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/rie_results_packaging_review_figures_gate_v1 |

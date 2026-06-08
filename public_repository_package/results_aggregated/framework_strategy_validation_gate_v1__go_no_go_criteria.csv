@@ -1,0 +1,10 @@
+criterion,passed,value,generated_at,output_path
+at_least_5_valid_protocols,True,20,2026-06-05T14:24:59+00:00,/home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/framework_strategy_validation_gate_v1
+framework_regret_lower_than_two_strong_fixed,True,2,2026-06-05T14:24:59+00:00,/home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/framework_strategy_validation_gate_v1
+framework_top2_in_three_utilities,False,0,2026-06-05T14:24:59+00:00,/home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/framework_strategy_validation_gate_v1
+far_mdr_violation_better_than_two_strong_fixed,False,1,2026-06-05T14:24:59+00:00,/home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/framework_strategy_validation_gate_v1
+label_efficiency_advantage,False,False,2026-06-05T14:24:59+00:00,/home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/framework_strategy_validation_gate_v1
+robustness_advantage,True,True,2026-06-05T14:24:59+00:00,/home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/framework_strategy_validation_gate_v1
+deployment_advantage,True,True,2026-06-05T14:24:59+00:00,/home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/framework_strategy_validation_gate_v1
+validation_only_selection_no_test_leakage,True,True,2026-06-05T14:24:59+00:00,/home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/framework_strategy_validation_gate_v1
+different_models_selected_across_scenarios,True,6,2026-06-05T14:24:59+00:00,/home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/framework_strategy_validation_gate_v1

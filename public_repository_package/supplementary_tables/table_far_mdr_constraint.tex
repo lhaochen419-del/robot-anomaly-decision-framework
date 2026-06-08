@@ -1,0 +1,21 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.4pt}
+\renewcommand{\arraystretch}{1.05}
+\caption{FAR/MDR constraint violation rates. Lower violation rates are better; safety and low-false-alarm strategies intentionally trade one error type against the other.}
+\label{tab:far-mdr-constraints}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}X*{5}{>{\centering\arraybackslash}p{0.095\linewidth}}@{}}
+\toprule
+Strategy & FAR viol. & MDR viol. & Joint viol. & FAR & MDR \\
+\midrule
+Framework-Balanced & 0.080 & 0.230 & 0.290 & 0.174 & 0.256 \\
+Framework-Safety & 0.370 & 0.110 & 0.480 & 0.322 & 0.154 \\
+Framework-Low-False-Alarm & 0.030 & 0.420 & 0.450 & 0.087 & 0.365 \\
+Framework-Deployment & 0.070 & 0.220 & 0.270 & 0.174 & 0.261 \\
+Fixed-LightGBM & 0.053 & 0.179 & 0.232 & 0.169 & 0.240 \\
+Fixed-XGBoost & 0.074 & 0.179 & 0.242 & 0.182 & 0.270 \\
+Fixed-RandomForest & 0.095 & 0.242 & 0.337 & 0.189 & 0.291 \\
+\bottomrule
+\end{tabularx}
+\end{table}

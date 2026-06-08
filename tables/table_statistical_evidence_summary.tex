@@ -1,0 +1,21 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4.5pt}
+\renewcommand{\arraystretch}{1.08}
+\caption{Compressed statistical evidence for prespecified framework-versus-fixed comparisons. Each comparison uses $n=95$ paired scenario-level samples. Unadjusted Wilcoxon $p$-values, effect sizes and wins/losses are retained in the supplementary analysis files generated with this manuscript. Cluster intervals use dataset--protocol group resampling with replacement.}
+\label{tab:statistical-evidence}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}p{0.27\linewidth}>{\RaggedRight\arraybackslash}p{0.14\linewidth}r r r >{\RaggedRight\arraybackslash}X@{}}
+\toprule
+Comparison & Objective & Mean diff. & Holm $p$ & Cluster 95\% CI & Result \\
+\midrule
+Balanced vs Fixed-LightGBM & balanced & 0.0020 & 0.1371 & [-0.016, 0.018] & small, not significant \\
+Balanced vs Fixed-XGBoost & balanced & 0.0686 & 9.98e-10 & [0.037, 0.096] & framework advantage \\
+Balanced vs Fixed-RandomForest & balanced & 0.1142 & 5.62e-10 & [0.071, 0.155] & framework advantage \\
+Safety vs Fixed-LightGBM & safety & 0.0706 & 9.10e-08 & [0.013, 0.127] & framework advantage \\
+Low-FA vs Fixed-LightGBM & low false alarm & 0.0946 & 2.10e-09 & [0.066, 0.125] & framework advantage \\
+Deployment vs Fixed-XGBoost & deployment & 0.0603 & 9.98e-10 & [0.027, 0.087] & framework advantage \\
+Deployment vs Fixed-RandomForest & deployment & 0.1175 & 4.11e-10 & [0.071, 0.163] & framework advantage \\
+\bottomrule
+\end{tabularx}
+\end{table}

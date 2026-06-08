@@ -1,0 +1,11 @@
+dataset:
+  name: KUKA LWR4+ joint torque collision/contact dataset
+  adapter: kuka_torque
+  official_source: https://zenodo.org/records/6461868
+  raw_dir: data/raw/kuka_torque
+  processed_csv: data/processed/kuka_torque/kuka_torque_unified.csv
+  robot_platform: KUKA LWR4+
+  expected_files: cls-joint-1.csv ... cls-joint-7.csv, ctc-joint-*.csv, fre-joint-*.csv
+  expected_channels: seven joint torque channels, 1024 samples per segment
+  labels: fre normal, ctc intentional contact, cls accidental collision
+  status: NEED_DATA

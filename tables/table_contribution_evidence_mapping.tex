@@ -1,0 +1,17 @@
+\begin{table}[!htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\caption{Contribution-to-evidence mapping. The table summarizes how each engineering contribution is supported by the protocol design, results and discussion.}
+\label{tab:contribution-evidence}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}p{0.24\linewidth}>{\RaggedRight\arraybackslash}p{0.32\linewidth}>{\RaggedRight\arraybackslash}p{0.20\linewidth}>{\RaggedRight\arraybackslash}X@{}}
+\toprule
+Contribution & Evidence in manuscript & Main support & Evidence scope \\
+\midrule
+Leakage-safe and calibration-aware deployment protocol & Segment/file/run-level split, train-only preprocessing, validation-only thresholding, no random overlapping-window split and no test-set threshold tuning & Data and Protocols; Table~\ref{tab:dataset-inclusion}; protocol risk section; Fig.~\ref{fig:framework-workflow} & Evaluated under the reported split/protocol design and dataset roles \\
+Cost-aware model-threshold selection for deployment-oriented anomaly diagnosis & Fixed model strategies compared with validation-selected framework strategies under balanced, safety, low-false-alarm, robust, deployment and label-budget utilities & Strategy utility definitions; Procedure~1; Table~\ref{tab:statistical-evidence}; FAR/MDR and latency results & Applies to the candidate model pool and validation/calibration quality used in this study \\
+Reproducible engineering evaluation across deployment constraints & Main benchmark, FAR/MDR tradeoff, label-budget, robustness/domain-shift, latency and scenario guidance with negative findings retained & Results; application scenario mapping; limitations & Supports deployment-oriented evidence synthesis across the evaluated datasets and constraints \\
+\bottomrule
+\end{tabularx}
+\end{table}

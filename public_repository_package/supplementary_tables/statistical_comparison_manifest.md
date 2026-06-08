@@ -1,0 +1,1 @@
+Statistical comparison files include unadjusted Wilcoxon p-values, paired t-test p-values, sign-test p-values, effect sizes, wins/losses and cluster bootstrap details derived from existing result artifacts.

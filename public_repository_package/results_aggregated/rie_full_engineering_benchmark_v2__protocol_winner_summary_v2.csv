@@ -1,0 +1,81 @@
+dataset,protocol,metric,winner,winner_value
+IMAD-DS BrushlessMotor,brushless_main_binary_if_valid,macro_f1,RandomForest,0.9639518419973369
+IMAD-DS BrushlessMotor,brushless_main_binary_if_valid,pr_auc,RandomForest,0.9963599223337273
+IMAD-DS BrushlessMotor,brushless_main_binary_if_valid,far,RandomForest,0.044
+IMAD-DS BrushlessMotor,brushless_main_binary_if_valid,mdr,RandomForest,0.028000000000000004
+IMAD-DS BrushlessMotor,brushless_missing_sensor_if_meaningful,macro_f1,RandomForest,0.9639518419973369
+IMAD-DS BrushlessMotor,brushless_missing_sensor_if_meaningful,pr_auc,RandomForest,0.9963599223337273
+IMAD-DS BrushlessMotor,brushless_missing_sensor_if_meaningful,far,RandomForest,0.044
+IMAD-DS BrushlessMotor,brushless_missing_sensor_if_meaningful,mdr,RandomForest,0.028000000000000004
+IMAD-DS BrushlessMotor,brushless_source_to_target_if_valid,macro_f1,XGBoost,0.9768983916848178
+IMAD-DS BrushlessMotor,brushless_source_to_target_if_valid,pr_auc,XGBoost,0.999903440441415
+IMAD-DS BrushlessMotor,brushless_source_to_target_if_valid,far,RandomForest,0.0
+IMAD-DS BrushlessMotor,brushless_source_to_target_if_valid,mdr,IsolationForest,0.0
+IMAD-DS RoboticArm raw-window,imadds_raw_label_efficiency_20pct,macro_f1,LightGBM,0.7081855007773219
+IMAD-DS RoboticArm raw-window,imadds_raw_label_efficiency_20pct,pr_auc,LightGBM,0.8279930722299224
+IMAD-DS RoboticArm raw-window,imadds_raw_label_efficiency_20pct,far,LightGBM,0.3923076923076923
+IMAD-DS RoboticArm raw-window,imadds_raw_label_efficiency_20pct,mdr,condition_decoupled_residual_energy,0.0012820512820512799
+IMAD-DS RoboticArm raw-window,imadds_raw_label_efficiency_5pct,macro_f1,XGBoost,0.45540516112810386
+IMAD-DS RoboticArm raw-window,imadds_raw_label_efficiency_5pct,pr_auc,LightGBM,0.7009952316837986
+IMAD-DS RoboticArm raw-window,imadds_raw_label_efficiency_5pct,far,XGBoost,0.8153846153846154
+IMAD-DS RoboticArm raw-window,imadds_raw_label_efficiency_5pct,mdr,RandomForest,0.0
+IMAD-DS RoboticArm raw-window,imadds_raw_label_efficiency_full,macro_f1,LightGBM,0.8170078967516711
+IMAD-DS RoboticArm raw-window,imadds_raw_label_efficiency_full,pr_auc,LightGBM,0.9197293476861947
+IMAD-DS RoboticArm raw-window,imadds_raw_label_efficiency_full,far,LightGBM,0.26217948717948714
+IMAD-DS RoboticArm raw-window,imadds_raw_label_efficiency_full,mdr,condition_decoupled_residual_energy,0.0012820512820512799
+IMAD-DS RoboticArm raw-window,imadds_raw_label_efficiency_normal_only,macro_f1,condition_decoupled_residual_energy,0.44522090213615834
+IMAD-DS RoboticArm raw-window,imadds_raw_label_efficiency_normal_only,pr_auc,USAD,0.5650693597342359
+IMAD-DS RoboticArm raw-window,imadds_raw_label_efficiency_normal_only,far,USAD,0.04807692307692304
+IMAD-DS RoboticArm raw-window,imadds_raw_label_efficiency_normal_only,mdr,condition_decoupled_residual_energy,0.8698717948717949
+IMAD-DS RoboticArm raw-window,imadds_raw_latency_benchmark,macro_f1,LightGBM,0.8170078967516711
+IMAD-DS RoboticArm raw-window,imadds_raw_latency_benchmark,pr_auc,LightGBM,0.9197293476861947
+IMAD-DS RoboticArm raw-window,imadds_raw_latency_benchmark,far,LightGBM,0.26217948717948714
+IMAD-DS RoboticArm raw-window,imadds_raw_latency_benchmark,mdr,condition_decoupled_residual_energy,0.0012820512820512799
+IMAD-DS RoboticArm raw-window,imadds_raw_leave_target_weight35_out,macro_f1,LightGBM,0.5227004202184072
+IMAD-DS RoboticArm raw-window,imadds_raw_leave_target_weight35_out,pr_auc,LightGBM,0.6670001521887223
+IMAD-DS RoboticArm raw-window,imadds_raw_leave_target_weight35_out,far,XGBoost,0.06923076923076918
+IMAD-DS RoboticArm raw-window,imadds_raw_leave_target_weight35_out,mdr,AutoEncoder,0.0
+IMAD-DS RoboticArm raw-window,imadds_raw_main_binary,macro_f1,LightGBM,0.8170078967516711
+IMAD-DS RoboticArm raw-window,imadds_raw_main_binary,pr_auc,LightGBM,0.9197293476861947
+IMAD-DS RoboticArm raw-window,imadds_raw_main_binary,far,LightGBM,0.26217948717948714
+IMAD-DS RoboticArm raw-window,imadds_raw_main_binary,mdr,condition_decoupled_residual_energy,0.0012820512820512799
+IMAD-DS RoboticArm raw-window,imadds_raw_missing_sensor_10,macro_f1,LightGBM,0.7735362466313768
+IMAD-DS RoboticArm raw-window,imadds_raw_missing_sensor_10,pr_auc,LightGBM,0.8839452824671511
+IMAD-DS RoboticArm raw-window,imadds_raw_missing_sensor_10,far,XGBoost,0.30576923076923074
+IMAD-DS RoboticArm raw-window,imadds_raw_missing_sensor_10,mdr,LSTM-AE,0.0019230769230769197
+IMAD-DS RoboticArm raw-window,imadds_raw_missing_sensor_20,macro_f1,LightGBM,0.7735362466313768
+IMAD-DS RoboticArm raw-window,imadds_raw_missing_sensor_20,pr_auc,LightGBM,0.8839452824671511
+IMAD-DS RoboticArm raw-window,imadds_raw_missing_sensor_20,far,XGBoost,0.30576923076923074
+IMAD-DS RoboticArm raw-window,imadds_raw_missing_sensor_20,mdr,LSTM-AE,0.0019230769230769197
+IMAD-DS RoboticArm raw-window,imadds_raw_noise_mild,macro_f1,LightGBM,0.8265988820277954
+IMAD-DS RoboticArm raw-window,imadds_raw_noise_mild,pr_auc,LightGBM,0.9207463834864813
+IMAD-DS RoboticArm raw-window,imadds_raw_noise_mild,far,LightGBM,0.23205128205128198
+IMAD-DS RoboticArm raw-window,imadds_raw_noise_mild,mdr,condition_decoupled_residual_energy,0.0012820512820512799
+IMAD-DS RoboticArm raw-window,imadds_raw_noise_moderate,macro_f1,LightGBM,0.807827884018218
+IMAD-DS RoboticArm raw-window,imadds_raw_noise_moderate,pr_auc,LightGBM,0.9133757013213204
+IMAD-DS RoboticArm raw-window,imadds_raw_noise_moderate,far,LightGBM,0.24871794871794867
+IMAD-DS RoboticArm raw-window,imadds_raw_noise_moderate,mdr,CIRFL_v3_reference,0.0019230769230769197
+IMAD-DS RoboticArm raw-window,imadds_raw_source_to_target,macro_f1,LightGBM,0.6665187866847749
+IMAD-DS RoboticArm raw-window,imadds_raw_source_to_target,pr_auc,LightGBM,0.8135943877416262
+IMAD-DS RoboticArm raw-window,imadds_raw_source_to_target,far,LightGBM,0.3875
+IMAD-DS RoboticArm raw-window,imadds_raw_source_to_target,mdr,AutoEncoder,0.0
+IMAD-DS RoboticArm segment-level,imadds_segment_label_efficiency,macro_f1,LightGBM,0.9448424270074047
+IMAD-DS RoboticArm segment-level,imadds_segment_label_efficiency,pr_auc,LightGBM,0.9903832720783482
+IMAD-DS RoboticArm segment-level,imadds_segment_label_efficiency,far,LightGBM,0.051282051282051225
+IMAD-DS RoboticArm segment-level,imadds_segment_label_efficiency,mdr,IsolationForest,0.0538461538461538
+IMAD-DS RoboticArm segment-level,imadds_segment_leave_target_weight35_out,macro_f1,LightGBM,0.41052867111826463
+IMAD-DS RoboticArm segment-level,imadds_segment_leave_target_weight35_out,pr_auc,IsolationForest,0.831794261106863
+IMAD-DS RoboticArm segment-level,imadds_segment_leave_target_weight35_out,far,RandomForest,0.07179487179487176
+IMAD-DS RoboticArm segment-level,imadds_segment_leave_target_weight35_out,mdr,IsolationForest,0.0
+IMAD-DS RoboticArm segment-level,imadds_segment_main_binary,macro_f1,LightGBM,0.9448424270074047
+IMAD-DS RoboticArm segment-level,imadds_segment_main_binary,pr_auc,LightGBM,0.9903832720783482
+IMAD-DS RoboticArm segment-level,imadds_segment_main_binary,far,LightGBM,0.051282051282051225
+IMAD-DS RoboticArm segment-level,imadds_segment_main_binary,mdr,IsolationForest,0.0538461538461538
+IMAD-DS RoboticArm segment-level,imadds_segment_raw_vs_segment_comparison,macro_f1,LightGBM,0.9448424270074047
+IMAD-DS RoboticArm segment-level,imadds_segment_raw_vs_segment_comparison,pr_auc,LightGBM,0.9903832720783482
+IMAD-DS RoboticArm segment-level,imadds_segment_raw_vs_segment_comparison,far,LightGBM,0.051282051282051225
+IMAD-DS RoboticArm segment-level,imadds_segment_raw_vs_segment_comparison,mdr,IsolationForest,0.0538461538461538
+IMAD-DS RoboticArm segment-level,imadds_segment_source_to_target,macro_f1,XGBoost,0.6419806152673301
+IMAD-DS RoboticArm segment-level,imadds_segment_source_to_target,pr_auc,LightGBM,0.8676360165474912
+IMAD-DS RoboticArm segment-level,imadds_segment_source_to_target,far,XGBoost,0.45344827586206893
+IMAD-DS RoboticArm segment-level,imadds_segment_source_to_target,mdr,IsolationForest,0.0

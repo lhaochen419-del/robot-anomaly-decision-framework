@@ -1,0 +1,69 @@
+project:
+  name: robot_cirfl_external_data_gate_v2
+  stage: external_data_acquisition_external_gate_v2_preparation
+  output_dir: outputs/external_data_gate_v2
+  run_full_experiments: false
+  generate_figures: false
+  real_only: true
+
+seeds:
+  - 7
+  - 13
+  - 23
+
+device: auto_fastest
+
+review_packet:
+  output_dir: progress_for_chatgpt/latest
+  generate_figures: false
+  max_files: 20
+
+road_reference:
+  selected_reference: CIRFL_v3
+  frozen: true
+  reference_note: CIRFL_v3 is frozen as the current RoAD algorithm reference; CIRFL_v3_plain_residual_score remains a strong comparator and must not be renamed as CIRFL.
+
+external_datasets:
+  imadds_robotic_arm:
+    priority: 1
+    official_source: https://zenodo.org/records/12665499
+    doi: https://doi.org/10.5281/zenodo.12665499
+    direct_url: https://zenodo.org/api/records/12665499/files/RoboticArm.7z/content
+    archive_path: data/raw/imadds/RoboticArm.7z
+    extract_dir: data/raw/imadds/RoboticArm
+    expected_size_bytes: 3545453763
+    expected_md5: a64498b7dcc297946a7fb8366e38ba33
+    processed_csv: data/processed/imadds_robotic_arm/imadds_robotic_arm_unified.csv
+    adapter: imadds_robotic_arm
+  nist_ur:
+    priority: 2
+    official_source: https://doi.org/10.18434/M31962
+    raw_dir: data/raw/nist_ur
+    processed_csv: data/processed/nist_ur/nist_ur_unified.csv
+    adapter: nist_ur
+  kuka_torque:
+    priority: 3
+    official_source: https://zenodo.org/records/6461868
+    raw_dir: data/raw/kuka_torque
+    processed_csv: data/processed/kuka_torque/kuka_torque_unified.csv
+    adapter: kuka_torque
+
+external_gate_protocol_templates:
+  imadds_main_binary:
+    goal: normal_vs_anomaly
+    split_unit: segment_id_or_file_id
+    status: requires_imadds_raw_data
+  imadds_source_to_target:
+    goal: source_domain_train_target_domain_test
+    split_unit: source_target_domain_and_segment_id
+    status: requires_imadds_raw_data
+  imadds_leave_one_domain_out:
+    goal: leave_one_domain_or_condition_out
+    split_unit: domain_or_condition_and_segment_id
+    status: requires_metadata
+  imadds_sensor_missing:
+    goal: gate_level_10_20_percent_missing_channel_robustness
+    status: template_only
+  cross_dataset_transfer:
+    goal: RoAD_to_IMAD_DS_and_reverse_feasibility
+    status: template_only

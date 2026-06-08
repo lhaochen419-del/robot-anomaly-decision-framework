@@ -1,0 +1,5 @@
+group,total,completed,failed,skipped,completion_rate,historical_not_rerun
+all_jobs,1305,745,380,180,0.5708812260536399,
+core_required,745,745,0,0,1.0,
+optional_secondary,150,0,0,150,0.0,
+historical_reference,275,0,245,30,0.0,275.0

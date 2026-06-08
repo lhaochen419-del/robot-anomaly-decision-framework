@@ -1,0 +1,18 @@
+
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3.8pt}
+\renewcommand{\arraystretch}{1.10}
+\caption{Split accounting for the processed IMAD-DS RoboticArm raw-window artifact. Counts are reported at the processed-window level.}
+\label{tab:split-accounting}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}p{0.22\linewidth}rrrr>{\RaggedRight\arraybackslash}X@{}}
+\toprule
+Protocol/accounting view & Total available & Train & Validation & Test & Interpretation \\
+\midrule
+Processed raw-window artifact & 4364 & -- & -- & -- & Total processed windows before selecting a representative protocol split. \\
+Representative main binary split & 4364 & 2508 & 608 & 624 & The main split accounts for 3740 windows; the remaining 624 windows are retained in the processed artifact for protocol-specific analyses documented in the provenance files. \\
+Source-to-target/stress protocols & 4364 & -- & -- & -- & Alternative protocols use their own split accounting and should not be summed against the representative main binary split. \\
+\bottomrule
+\end{tabularx}
+\end{table}

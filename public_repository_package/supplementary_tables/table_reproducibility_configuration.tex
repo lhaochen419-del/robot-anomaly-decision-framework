@@ -1,0 +1,21 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\caption{Reproducibility configuration and interpretation limits from available artifacts.}
+\label{tab:repro-config}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}p{0.15\linewidth}>{\RaggedRight\arraybackslash}p{0.33\linewidth}>{\RaggedRight\arraybackslash}p{0.21\linewidth}>{\RaggedRight\arraybackslash}X@{}}
+\toprule
+Component & Reported setting & Evidence/source & Interpretation or limitation \\
+\midrule
+Input features & Tree models use channel-wise mean, standard deviation, minimum, maximum and endpoint difference; deep baselines use normalized multivariate windows. & raw-window adapter; benchmark runner & No additional RMS, skewness, kurtosis or FFT/band-energy features are inferred from unavailable artifacts. \\
+Processed windows & IMAD-DS RoboticArm raw-window artifact contains 4364 windows and seven channels; main split reports 2508 train, 608 validation and 624 test windows with 312 normal and 312 anomaly test windows. & strategy selection log; manuscript result artifacts & Sampling-rate, stride and overlap metadata are not preserved in manuscript-level outputs; results are interpreted at processed-window level. \\
+Split and preprocessing & Segment/file/run-level splitting with train-only normalization and validation-only threshold selection. & benchmark runner; strategy validation script & Test labels are used only for final reporting. \\
+Stress protocols & Missing-sensor stress uses 10\textbackslash{}\% and 20\textbackslash{}\% channel-drop settings; noise stress uses Gaussian scale 0.02 and 0.05. & benchmark runner & Stress results are benchmark robustness evidence, not online fault-injection trials. \\
+Model settings & LightGBM 70 estimators/lr 0.06/31 leaves; XGBoost 60 estimators/depth 4/lr 0.06; RandomForest 80 trees/depth 10; compact AE/LSTM-AE/USAD baselines trained for three epochs with AdamW lr $10^{-3}$ and batch size 128. & benchmark runner & Settings define reproducible baselines rather than optimized architecture claims. \\
+Threshold grid & Validation-only best-F1, Youden, target FAR 0.05/0.10/0.15, target recall 0.80/0.90/0.95 and cost ratios 2:1, 5:1 and 10:1. & threshold sensitivity files; strategy validation script & Normal-only label-budget calibration uses normal-score rules rather than anomaly-label macro-F1 tuning. \\
+Latency & Prepared-input prediction latency is reported per window; tree feature extraction, sensor I/O, robot middleware, alarm handling and operator response are excluded. & latency/deployment result table; benchmark runner & Hardware, warm-up and repetition metadata are not preserved; latency is descriptive prepared-input timing only. \\
+\bottomrule
+\end{tabularx}
+\end{table}

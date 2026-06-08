@@ -1,0 +1,71 @@
+stage: RIE Full Engineering Experiment Design Gate v1
+target_status: READY_TO_RUN_FULL_EXPERIMENTS
+scope:
+  new_algorithm_generation: false
+  full_experiments: false
+  manuscript: false
+  abstract: false
+  figures: false
+  synthetic_results: false
+project:
+  output_dir: outputs/rie_full_engineering_design_gate_v1
+  review_dir: progress_for_chatgpt/latest
+seeds: [7, 13, 23, 31, 42]
+primary_dataset: IMAD-DS RoboticArm raw-window
+secondary_datasets:
+  - IMAD-DS RoboticArm segment-level
+  - IMAD-DS BrushlessMotor
+  - RoAD
+  - NIST UR
+optional_missing:
+  - KUKA LWR4+ torque/collision
+full_experiment_policy:
+  threshold_source: validation_only
+  normalization_source: train_only
+  split_units:
+    raw_window: segment_uid/file_id
+    road: run_id/scenario/episode
+    segment_level: segment/file/domain unit
+  no_random_overlapping_window_split: true
+  no_test_based_selection: true
+models:
+  tree_statistical:
+    - LightGBM
+    - XGBoost
+    - RandomForest
+    - IsolationForest
+  deep_time_series:
+    - AutoEncoder
+    - LSTM-AE
+    - USAD
+  optional_if_stable:
+    - TCN-AE
+    - TranAD
+  historical_failed_references:
+    - CIRFL_v3_reference
+    - CETRA_full
+    - COIL_full
+    - raw_residual_energy
+    - condition_decoupled_residual_energy
+metric_plan:
+  - macro_f1
+  - weighted_f1
+  - auroc
+  - pr_auc
+  - far
+  - mdr
+  - far_at_95_recall
+  - eer
+  - detection_delay_if_supported
+  - label_budget
+  - missing_sensor_degradation
+  - domain_generalization_gap
+  - training_time
+  - inference_latency
+  - model_size
+  - cpu_gpu_device
+preflight:
+  run_loader_batch_check: true
+  run_deep_forward_check: true
+  run_tree_tiny_fit_check: true
+  no_full_training: true

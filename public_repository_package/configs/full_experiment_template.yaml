@@ -1,0 +1,49 @@
+project:
+  stage: full_experiment_template_only
+  note: Do not run before gate status is GO.
+
+datasets:
+  required_minimum: 3
+  candidates:
+    - name: RoAD Robotic Arm Dataset
+      status: NEED_DATA
+    - name: IMAD-DS robotic arm subset
+      status: NEED_DATA
+    - name: NIST UR robot health/degradation data
+      status: NEED_DATA
+    - name: KUKA torque/contact/collision dataset
+      status: NEED_DATA
+
+seeds: [7, 13, 23, 31, 43]
+
+baselines:
+  target_count: 12-14
+  required:
+    - Random Forest
+    - SVM
+    - XGBoost or LightGBM
+    - Isolation Forest
+    - One-Class SVM
+    - AutoEncoder
+    - VAE
+    - LSTM-AE
+    - TCN or GRU predictor
+    - USAD
+    - TranAD
+    - MTAD-GAT
+    - GDN or Anomaly Transformer
+
+cross_condition_protocols:
+  per_dataset_minimum: 2
+  examples:
+    - train_known_loads_test_unseen_load
+    - train_known_speeds_test_unseen_speed
+    - train_task_A_test_task_B
+
+cross_dataset_protocols:
+  minimum: 2
+  allowed_alignment:
+    - shared_statistical_feature_space
+    - sensor_token_abstraction
+    - source_pretrain_target_finetune
+

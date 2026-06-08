@@ -1,0 +1,11 @@
+dataset:
+  name: RoAD Robotic Arm Dataset
+  adapter: road
+  official_source: https://gitlab.com/AlessioMascolini/roaddataset
+  publication: https://doi.org/10.1109/IECON51785.2023.10311726
+  raw_dir: data/raw/road
+  processed_csv: data/processed/road/road_unified.csv
+  robot_platform: collaborative robotic arm in a production line
+  expected_channels: 86 numeric channels plus anomaly label in anomaly subsets
+  conditions: [training, collision, control, weight, velocity]
+  status: package_install_attempted

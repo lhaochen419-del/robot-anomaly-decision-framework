@@ -1,0 +1,92 @@
+stage: Publication Reposition Gate v1
+status_target: RIE_PROMISING
+scope:
+  full_experiments: false
+  manuscript: false
+  abstract: false
+  figures: false
+  synthetic_results: false
+  new_algorithm_generation: false
+project:
+  output_dir: outputs/publication_reposition_gate_v1
+  review_dir: progress_for_chatgpt/latest
+seeds: [7, 13, 23]
+data_sources:
+  primary:
+    - IMAD-DS RoboticArm raw-window
+  secondary:
+    - IMAD-DS RoboticArm segment-level
+    - IMAD-DS BrushlessMotor readiness
+    - NIST UR readiness
+    - RoAD frozen reference
+  optional_missing:
+    - KUKA LWR4+ torque/collision
+input_outputs:
+  raw_window_metrics: outputs/raw_window_external_gate_v3/07_raw_window_gate_metrics.csv
+  raw_window_baselines: outputs/raw_window_external_gate_v3/08_raw_window_baseline_comparison.csv
+  raw_window_protocol_validity: outputs/raw_window_external_gate_v3/imadds_raw_protocol_validity_v3.csv
+  raw_data_audit: outputs/raw_window_external_gate_v3/raw_data_audit.csv
+  cetra_metrics: outputs/cetra_gate_v1/06_cetra_gate_metrics.csv
+  cetra_baselines: outputs/cetra_gate_v1/07_cetra_baseline_comparison.csv
+  coil_metrics: outputs/coil_gate_v1/07_coil_gate_metrics.csv
+  coil_baselines: outputs/coil_gate_v1/08_coil_baseline_comparison.csv
+  coil_label_budget: outputs/coil_gate_v1/label_budget_comparison.csv
+  external_gate_v2_metrics: outputs/external_data_gate_v2/08_external_gate_metrics.csv
+  road_reference_summary: outputs/external_data_gate_v2/road_reference_table_v2.csv
+pilot_protocols:
+  core_raw_window:
+    - imadds_raw_main_binary
+    - imadds_raw_source_to_target
+    - imadds_raw_leave_target_weight35_out
+  robustness:
+    - imadds_raw_sensor_missing_10
+    - imadds_raw_sensor_missing_20
+    - imadds_raw_noise_mild
+    - imadds_raw_noise_moderate
+  label_efficiency:
+    - normal_only
+    - labeled_5pct
+    - labeled_20pct
+    - full_validation
+benchmark_models:
+  tree_statistical:
+    - LightGBM
+    - XGBoost
+    - RandomForest
+    - IsolationForest
+  deep_time_series:
+    - AutoEncoder
+    - LSTM-AE
+    - USAD
+  historical_failed_references:
+    - CIRFL_v3_reference
+    - CETRA_full
+    - COIL_full
+    - raw_residual_energy
+    - condition_decoupled_residual_energy
+    - source_concentration_residual
+engineering_metrics:
+  - macro_f1
+  - weighted_f1
+  - auroc
+  - pr_auc
+  - far
+  - mdr
+  - far_at_95_recall
+  - threshold_source
+  - label_budget
+  - missing_sensor_degradation
+  - domain_generalization_gap
+  - train_time_sec
+  - inference_time_sec
+  - cpu_latency_ms
+  - gpu_latency_ms
+  - model_size_mb
+decision_rules:
+  eswa_new_algorithm: no_go_without_algorithm_mechanism_advantage
+  rie_promising_min_conditions: 4
+  benchmark_promising_min_conditions: 4
+notes:
+  - This is a publication-direction pilot and aggregation of existing real gate results, not a full experiment.
+  - Thresholds and normalization in source metrics are validation-only and train-only respectively.
+  - Missing-sensor and label-efficiency conclusions are pilot-level and must be expanded before final submission.

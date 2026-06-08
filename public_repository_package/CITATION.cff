@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: 'Leakage-safe and calibration-aware model-threshold selection for multi-sensor robotic-arm anomaly diagnosis'
+message: 'If you use this repository, please cite the associated manuscript and the original third-party datasets.'
+authors:
+  - family-names: Li
+    given-names: Haochen
+  - family-names: Wang
+    given-names: Yapeng
+repository-code: REPOSITORY_URL_TO_BE_FILLED_AFTER_PUBLIC_UPLOAD

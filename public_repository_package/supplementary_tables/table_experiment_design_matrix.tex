@@ -1,0 +1,20 @@
+\begin{table}[!htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\caption{Experiment design matrix. The table summarizes the main protocol blocks; all blocks use leakage-safe split units and validation-only calibration.}
+\label{tab:experiment-design}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}p{0.15\linewidth}>{\RaggedRight\arraybackslash}p{0.25\linewidth}>{\RaggedRight\arraybackslash}p{0.18\linewidth}>{\RaggedRight\arraybackslash}p{0.16\linewidth}>{\RaggedRight\arraybackslash}X@{}}
+\toprule
+Block & Data and protocols & Model pool & Main metrics & Purpose \\
+\midrule
+Main benchmark & IMAD-DS RoboticArm raw-window and segment-level; BrushlessMotor if valid & Fixed baselines and framework strategies & macro-F1, PR-AUC, FAR, MDR & Primary diagnosis and granularity comparison \\
+Operating constraints & Safety and low-false-alarm thresholds across IMAD-DS protocols & Framework-Safety, Framework-Low-False-Alarm, strong fixed baselines & FAR/MDR violations & Operating-point tradeoff analysis \\
+Label budget & Normal-only, 5\%, 20\% and full validation budgets & Fixed and framework strategies & macro-F1, PR-AUC, FAR, MDR & Label-scarcity diagnosis \\
+Robustness and shift & Missing sensors, noise, source-to-target and holdout settings & Fixed baselines, Framework-Robust and Framework-Balanced & degradation and utility & Stress and deployment reliability \\
+Deployment & Per-window latency and model-size measurements & Tree, statistical and deep baselines; Framework-Deployment & latency and prepared-input deployment-screening utility & prepared-input screening feasibility \\
+Guidance & Valid strategy-validation scenarios & Validation-selected strategies and fixed defaults & rank, regret and utility & Scenario-specific decision support \\
+\bottomrule
+\end{tabularx}
+\end{table}

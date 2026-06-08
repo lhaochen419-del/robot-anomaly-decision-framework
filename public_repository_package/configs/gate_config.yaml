@@ -1,0 +1,88 @@
+project:
+  name: robot_cirfl_gate
+  output_dir: outputs/gate_sanity
+  real_data_available: false
+  status_without_real_data: NEED_DATA
+
+seeds: [7, 13, 23]
+device: auto
+
+data:
+  source: synthetic
+  path: outputs/synthetic_robot_dataset/synthetic_robot.csv
+  window_size: 48
+  stride: 12
+  feature_cols: []
+  label_col: fault_label
+  condition_col: condition_id
+  run_col: run_id
+  trajectory_col: trajectory_id
+  fault_episode_col: fault_episode_id
+  time_col: t
+  split:
+    train_runs: [0, 1, 2, 3, 4, 5]
+    val_runs: [6, 7]
+    test_runs: [8, 9, 10, 11]
+  cross_condition:
+    train_conditions: [0, 1]
+    val_conditions: [0, 1]
+    test_conditions: [2]
+  synthetic:
+    n_runs: 12
+    length_per_run: 420
+    n_channels: 12
+    n_conditions: 3
+    n_fault_types: 3
+    anomaly_fraction: 0.18
+    noise_std: 0.045
+
+model:
+  name: CIRFL
+  hidden_dim: 64
+  condition_dim: 16
+  residual_dim: 48
+  n_relation_atoms: 8
+  dropout: 0.05
+  num_classes: 4
+  max_conditions: 16
+  loss_weights:
+    residual_nll: 1.0
+    prototype_ce: 0.45
+    condition_invariance: 0.12
+    field_consistency: 0.05
+    source_sparsity: 0.01
+    source_smoothness: 0.01
+    atom_diversity: 0.01
+
+training:
+  epochs: 4
+  overfit_epochs: 10
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  grad_clip: 5.0
+  threshold_strategy: best_f1
+
+baselines:
+  epochs: 3
+  batch_size: 64
+  learning_rate: 0.001
+  methods:
+    - random_forest
+    - xgboost_or_lightgbm
+    - isolation_forest
+    - autoencoder
+    - lstm_ae
+    - usad
+
+robustness:
+  gaussian_noise_std: 0.08
+  missing_channel_prob: 0.10
+
+latency:
+  warmup: 10
+  repeats: 50
+
+review_packet:
+  output_dir: progress_for_chatgpt/latest
+

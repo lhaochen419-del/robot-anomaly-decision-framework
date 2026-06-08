@@ -1,0 +1,8 @@
+comparison,objective,n_clusters,B,ci_method,cluster_unit,cluster_95_ci
+Balanced vs Fixed-LightGBM,balanced,19,5000,percentile,dataset-protocol,"[-0.016, 0.018]"
+Balanced vs Fixed-XGBoost,balanced,19,5000,percentile,dataset-protocol,"[0.037, 0.096]"
+Balanced vs Fixed-RandomForest,balanced,19,5000,percentile,dataset-protocol,"[0.071, 0.155]"
+Safety vs Fixed-LightGBM,safety,19,5000,percentile,dataset-protocol,"[0.013, 0.127]"
+Low-FA vs Fixed-LightGBM,low false alarm,19,5000,percentile,dataset-protocol,"[0.066, 0.125]"
+Deployment vs Fixed-XGBoost,deployment,19,5000,percentile,dataset-protocol,"[0.027, 0.087]"
+Deployment vs Fixed-RandomForest,deployment,19,5000,percentile,dataset-protocol,"[0.071, 0.163]"

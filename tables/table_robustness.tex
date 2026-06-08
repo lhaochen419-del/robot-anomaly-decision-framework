@@ -1,0 +1,22 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Robustness and domain-shift summary. The table supports bounded robustness claims and does not imply broad superiority over Fixed-LightGBM.}
+\label{tab:robustness-domain}
+\begin{tabular}{lrrrrr}
+\toprule
+Strategy / group & Macro-F1 & PR-AUC & FAR & MDR & Utility \\
+\midrule
+Fixed-LightGBM / domain\_shift & 0.631 & 0.768 & 0.225 & 0.443 & -0.037 \\
+Fixed-RandomForest / domain\_shift & 0.566 & 0.732 & 0.202 & 0.555 & -0.191 \\
+Fixed-XGBoost / domain\_shift & 0.597 & 0.746 & 0.221 & 0.488 & -0.113 \\
+Framework-Balanced / domain\_shift & 0.615 & 0.758 & 0.205 & 0.477 & -0.067 \\
+Framework-Robust / domain\_shift & 0.615 & 0.758 & 0.205 & 0.477 & -0.067 \\
+Fixed-LightGBM / robustness & 0.834 & 0.916 & 0.171 & 0.160 & 0.503 \\
+Fixed-RandomForest / robustness & 0.784 & 0.854 & 0.221 & 0.209 & 0.354 \\
+Fixed-XGBoost / robustness & 0.809 & 0.899 & 0.174 & 0.207 & 0.427 \\
+Framework-Balanced / robustness & 0.839 & 0.919 & 0.173 & 0.148 & 0.518 \\
+Framework-Robust / robustness & 0.839 & 0.919 & 0.173 & 0.149 & 0.517 \\
+\bottomrule
+\end{tabular}
+\end{table}

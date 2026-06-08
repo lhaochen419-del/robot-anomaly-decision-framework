@@ -1,0 +1,25 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Label-budget sensitivity. The label-budget advantage is not established and full validation remains important.}
+\label{tab:label-budget}
+\begin{tabular}{lrrrrr}
+\toprule
+Strategy / budget & Macro-F1 & PR-AUC & FAR & MDR & Utility \\
+\midrule
+Framework-Balanced / normal\_only & 0.558 & 0.574 & 0.439 & 0.438 & -0.319 \\
+Framework-Balanced / 5pct & 0.639 & 0.712 & 0.197 & 0.503 & -0.081 \\
+Framework-Balanced / 20pct & 0.715 & 0.829 & 0.199 & 0.363 & 0.113 \\
+Framework-Balanced / full & 0.888 & 0.954 & 0.115 & 0.109 & 0.604 \\
+Fixed-LightGBM / 5pct & 0.632 & 0.701 & 0.255 & 0.464 & -0.107 \\
+Fixed-LightGBM / 20pct & 0.720 & 0.828 & 0.236 & 0.322 & 0.121 \\
+Fixed-LightGBM / full & 0.887 & 0.955 & 0.115 & 0.111 & 0.600 \\
+Fixed-XGBoost / 5pct & 0.633 & 0.682 & 0.351 & 0.373 & -0.111 \\
+Fixed-XGBoost / 20pct & 0.726 & 0.826 & 0.213 & 0.333 & 0.139 \\
+Fixed-XGBoost / full & 0.858 & 0.939 & 0.144 & 0.139 & 0.516 \\
+Fixed-RandomForest / 5pct & 0.607 & 0.649 & 0.367 & 0.405 & -0.185 \\
+Fixed-RandomForest / 20pct & 0.679 & 0.745 & 0.259 & 0.375 & 0.005 \\
+Fixed-RandomForest / full & 0.857 & 0.925 & 0.136 & 0.150 & 0.511 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,39 @@
+project:
+  name: robot_cirfl_cetra_gate_v1
+  stage: CETRA Gate v1
+  output_dir: outputs/cetra_gate_v1
+  run_full_experiments: false
+  generate_figures: false
+  real_only: true
+
+seeds: [7, 13, 23]
+device: auto_fastest
+
+raw_windows:
+  config: configs/datasets/imadds_roboticarm_raw.yaml
+  npz: data/processed/imadds_roboticarm_raw/imadds_raw_windows.npz
+  metadata_csv: data/processed/imadds_roboticarm_raw/imadds_raw_windows_metadata.csv
+
+cetra:
+  threshold_strategy: best_f1
+  fit_source: train_normal_only
+  event_bins_source: train_normal_only
+  conformal_source: validation_only
+  automaton_alpha: 0.5
+
+protocols:
+  core:
+    - imadds_raw_main_binary
+    - imadds_raw_source_to_target
+    - imadds_raw_leave_target_weight35_out
+  robustness:
+    - imadds_raw_sensor_missing_10
+    - imadds_raw_sensor_missing_20
+  missing_channel_rates:
+    imadds_raw_sensor_missing_10: 0.10
+    imadds_raw_sensor_missing_20: 0.20
+
+review_packet:
+  output_dir: progress_for_chatgpt/latest
+  max_files: 20
+  generate_figures: false

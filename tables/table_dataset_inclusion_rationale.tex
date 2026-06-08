@@ -1,0 +1,20 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.08}
+\caption{Dataset inclusion and exclusion rationale. The table separates primary evidence from secondary checks and readiness-only datasets.}
+\label{tab:dataset-rationale}
+\label{tab:dataset-inclusion}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}p{0.17\linewidth}>{\RaggedRight\arraybackslash}p{0.28\linewidth}>{\RaggedRight\arraybackslash}p{0.22\linewidth}>{\RaggedRight\arraybackslash}X@{}}
+\toprule
+Dataset & Used for & Not used for & Rationale \\
+\midrule
+IMAD-DS RoboticArm & Primary binary detection; source-to-target; leave-target-weight35-out; missing sensor/noise; label budget; latency. & Not applicable. & Labels and split units support the main robotic-arm task; multi-sensor robotic-arm data. \\
+IMAD-DS BrushlessMotor & Secondary industrial validation where adapter and labels support protocol. & Primary robotic-arm claim. & Different asset type; useful as secondary industrial check. \\
+RoAD & Secondary sanity/stress reference. & Main binary claim. & Confounding/artifact risk. \\
+NIST UR & Readiness/exclusion note only, if applicable. & Primary binary anomaly evidence. & Label/access/protocol mismatch. \\
+KUKA & Readiness/exclusion note only, if applicable. & Primary binary anomaly evidence. & Label/access/protocol mismatch. \\
+\bottomrule
+\end{tabularx}
+\end{table}

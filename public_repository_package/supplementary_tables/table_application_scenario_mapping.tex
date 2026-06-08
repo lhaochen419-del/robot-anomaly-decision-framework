@@ -1,0 +1,21 @@
+
+\begin{table}[!htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.10}
+\caption{Compressed application scenario mapping for operating-objective-specific strategy selection.}
+\label{tab:application-scenario}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}p{0.25\linewidth}>{\RaggedRight\arraybackslash}p{0.30\linewidth}>{\RaggedRight\arraybackslash}X@{}}
+\toprule
+Scenario & Recommended strategy & Main caveat \\
+\midrule
+Safety-critical & Framework-Safety & FAR increases and alarm handling must be feasible. \\
+Low false alarm & Framework-Low-False-Alarm & MDR increases and residual risk must be accepted. \\
+Label-rich & Fixed-LightGBM / Framework-Balanced & No dominance over the strongest fixed baseline is claimed. \\
+Label-scarce & Fixed-LightGBM & Low-label calibration remains weak. \\
+Domain shift & Fixed-LightGBM / local calibration & The framework audits risk rather than solving shift. \\
+Low-latency screening & LightGBM / XGBoost & End-to-end robot-cell timing validation is still required. \\
+\bottomrule
+\end{tabularx}
+\end{table}

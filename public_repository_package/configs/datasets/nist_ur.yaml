@@ -1,0 +1,11 @@
+dataset:
+  name: NIST UR robot degradation / health data
+  adapter: nist_ur
+  official_source: https://doi.org/10.18434/M31962
+  landing_page: https://www.nist.gov/el/intelligent-systems-division-73500/degradation-measurement-robot-arm-position-accuracy
+  raw_dir: data/raw/nist_ur
+  processed_csv: data/processed/nist_ur/nist_ur_unified.csv
+  robot_platform: Universal Robots UR5
+  expected_files: NIST downloaded tables including UR5TestResult_header.xlsx if available
+  expected_channels: TCP health and controller-level joint signals
+  status: NEED_DATA

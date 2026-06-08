@@ -1,0 +1,22 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.05}
+\caption{Summary of fixed-model and framework strategies. Oracle-Best-Test-Utility is a theoretical upper bound and is not deployable.}
+\label{tab:main-framework-strategy}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}X*{6}{>{\centering\arraybackslash}p{0.082\linewidth}}@{}}
+\toprule
+Strategy & Macro-F1 & PR-AUC & FAR & MDR & Avg. rank & Avg. regret \\
+\midrule
+Framework-Balanced & 0.773 & 0.861 & 0.174 & 0.256 & 2.675 & 0.115 \\
+Framework-Safety & 0.738 & 0.858 & 0.322 & 0.154 & 6.390 & 0.136 \\
+Framework-Low-False-Alarm & 0.750 & 0.859 & 0.087 & 0.365 & 6.408 & 0.127 \\
+Framework-Deployment & 0.770 & 0.859 & 0.174 & 0.261 & 3.117 & 0.118 \\
+Fixed-LightGBM & 0.785 & 0.877 & 0.169 & 0.240 & 3.998 & 0.110 \\
+Fixed-XGBoost & 0.761 & 0.861 & 0.182 & 0.270 & 8.100 & 0.131 \\
+Fixed-RandomForest & 0.744 & 0.835 & 0.189 & 0.291 & 7.554 & 0.149 \\
+Oracle-Best-Test-Utility & 0.808 & 0.875 & 0.168 & 0.207 & 1.768 & 0.089 \\
+\bottomrule
+\end{tabularx}
+\end{table}

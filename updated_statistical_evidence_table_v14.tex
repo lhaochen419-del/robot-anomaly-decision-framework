@@ -1,0 +1,23 @@
+% generated_at: 2026-06-06T07:51:37+00:00
+% output_path: /home/zyf/文档/跨工况工业机器人异常检测/robot_cirfl/outputs/rie_latex_template_draft_v14/tables/table_statistical_evidence_summary.tex
+\begin{table}[htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.6pt}
+\renewcommand{\arraystretch}{1.05}
+\caption{Statistical evidence for planned framework-versus-fixed comparisons. Each paired sample is a matched dataset--protocol--seed--scenario comparison; individual windows are not treated as independent samples. Holm-adjusted p-values are computed over the planned Wilcoxon comparisons.}
+\label{tab:statistical-evidence}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}p{0.22\linewidth}>{\RaggedRight\arraybackslash}p{0.12\linewidth}>{\centering\arraybackslash}p{0.045\linewidth}>{\centering\arraybackslash}p{0.078\linewidth}>{\centering\arraybackslash}p{0.078\linewidth}>{\centering\arraybackslash}p{0.078\linewidth}>{\centering\arraybackslash}p{0.06\linewidth}>{\RaggedRight\arraybackslash}X@{}}
+\toprule
+Comparison & Objective & $n$ & Mean diff. & Wilcoxon $p$ & Holm $p$ & $d_z$ & Result \
+\midrule
+Balanced vs Fixed-LightGBM & balanced & 95 & 0.0020 & 0.1371 & 0.4114 & 0.02 & small, not significant \\
+Balanced vs Fixed-XGBoost & balanced & 95 & 0.0686 & 2.00e-10 & 1.80e-09 & 0.60 & framework advantage \\
+Balanced vs Fixed-RandomForest & balanced & 95 & 0.1142 & 9.37e-11 & 9.37e-10 & 0.82 & framework advantage \\
+Safety vs Fixed-LightGBM & safety & 95 & 0.0706 & 4.55e-08 & 1.82e-07 & 0.35 & framework advantage \\
+Low-FA vs Fixed-LightGBM & low false alarm & 95 & 0.0946 & 7.01e-10 & 4.91e-09 & 0.61 & framework advantage \\
+Deployment vs Fixed-XGBoost & deployment & 95 & 0.0603 & 2.14e-10 & 1.80e-09 & 0.56 & framework advantage \\
+Deployment vs Fixed-RandomForest & deployment & 95 & 0.1175 & 5.88e-11 & 6.46e-10 & 0.85 & framework advantage \\
+\bottomrule
+\end{tabularx}
+\end{table}

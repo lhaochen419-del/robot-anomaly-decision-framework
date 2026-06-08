@@ -1,0 +1,161 @@
+project:
+  name: robot_cirfl_hard_gate_v3_road
+  stage: hard_gate_v3
+  output_dir: outputs/hard_gate_v3
+  v2_reference_dir: outputs/real_gate_v2
+  real_data_available: true
+  run_full_experiments: false
+  generate_figures: false
+  reuse_real_gate_v2_checkpoints: true
+seeds:
+- 7
+- 13
+- 23
+device: auto_fastest
+data:
+  source: road
+  source_type: real
+  dataset_name: RoAD
+  path: data/processed/road/road_unified.csv
+  window_size: 128
+  stride: 64
+  feature_cols: []
+  label_mode: binary
+  label_col: fault_label
+  condition_col: condition_id
+  run_col: run_id
+  trajectory_col: trajectory_id
+  fault_episode_col: fault_episode_id
+  time_col: t
+  normalization:
+    method: median_iqr
+    clip_quantiles:
+    - 0.5
+    - 99.5
+  metadata:
+    dataset_name: RoAD
+    robot_platform: collaborative robotic arm in a production line
+    sampling_frequency: not specified by adapter
+    source_url: https://gitlab.com/AlessioMascolini/roaddataset
+    split_unit: run_id / recording
+model:
+  name: CIRFL_v3
+  hidden_dim: 64
+  condition_dim: 16
+  residual_dim: 48
+  n_relation_atoms: 8
+  dropout: 0.05
+  num_classes: 2
+  max_conditions: 16
+  min_scale: 0.05
+  log_scale_clip: 5.0
+  energy_clip: 100000.0
+  atom_temperature: 0.7
+  atom_usage_floor: 0.02
+  residual_score_weight: 0.05
+  prototype_score_weight: 0.25
+  axis_score_weight: 2.0
+  score_margin: 0.75
+  loss_weights:
+    residual_nll: 1.0
+    prototype_ce: 0.75
+    condition_invariance: 0.25
+    field_consistency: 0.03
+    source_sparsity: 0.005
+    source_smoothness: 0.01
+    atom_diversity: 0.1
+    atom_usage_balance: 0.35
+    atom_assignment_entropy: 0.15
+    zh_zc_covariance: 0.1
+    zh_zc_orthogonality: 0.05
+    score_separation: 0.35
+    score_bce: 0.9
+training:
+  epochs: 10
+  overfit_epochs: 8
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  grad_clip: 5.0
+  threshold_strategy: target_far_0.10
+  class_balanced_loss: true
+  class_balanced_sampler: true
+  grl_max: 1.25
+  auto_orient_score: true
+hard_gate_v3:
+  status_policy: strict
+  full_experiments_allowed: false
+  figures_allowed: false
+  real_only: true
+  threshold_strategies:
+  - validation_f1
+  - validation_youden_j
+  - target_far_0.05
+  - target_far_0.10
+  - target_far_0.15
+  - target_recall_0.80
+  - target_recall_0.90
+  - target_recall_0.95
+  - cost_md2_fp1
+  - cost_md5_fp1
+  - cost_md10_fp1
+  stress_focus_protocols:
+  - scenario_holdout_collision
+  - scenario_holdout_weight
+  - condition_holdout_collision_condition
+baselines:
+  require_real_booster: true
+  epochs: 3
+  batch_size: 64
+  learning_rate: 0.001
+  methods:
+  - random_forest
+  - xgboost
+  - lightgbm
+  - isolation_forest
+  - autoencoder
+  - lstm_ae
+  - usad
+latency:
+  warmup: 10
+  repeats: 50
+review_packet:
+  output_dir: progress_for_chatgpt/latest
+  generate_figures: false
+protocols:
+- protocol: road_binary_main
+  family: binary_main
+  train_runs: [0, 1, 2, 3, 4, 9, 12, 13]
+  val_runs: [5, 10]
+  test_runs: [6, 7, 11, 14]
+  notes: Run-level split. Sanity/main protocol only; not sufficient as sole evidence because tree baselines are near-perfect.
+- protocol: scenario_holdout_collision
+  family: scenario_holdout
+  holdout_scenario: collision
+  train_runs: [0, 1, 2, 3, 4, 12, 13]
+  val_runs: [5, 14]
+  test_runs: [6, 10]
+  notes: Collision anomaly held out from training; priority stress protocol for MDR.
+- protocol: scenario_holdout_weight
+  family: scenario_holdout
+  holdout_scenario: weight
+  train_runs: [0, 1, 2, 3, 4, 9, 10, 13]
+  val_runs: [5, 14]
+  test_runs: [6, 11, 12]
+  notes: Weight anomaly held out from training; priority stress protocol for MDR.
+- protocol: scenario_holdout_velocity
+  family: scenario_holdout
+  holdout_scenario: velocity
+  train_runs: [0, 1, 2, 3, 4, 9, 12]
+  val_runs: [5, 10]
+  test_runs: [6, 11, 14]
+  notes: Velocity anomaly held out from training; stability stress protocol.
+- protocol: condition_holdout_collision_condition
+  family: condition_holdout
+  train_runs: [0, 1, 2, 3, 4, 5, 12, 13]
+  val_runs: [6, 14]
+  test_runs: [9, 10]
+  train_conditions: [0, 3, 4]
+  val_conditions: [0, 4]
+  test_conditions: [1]
+  notes: High-confounding condition stress protocol; not valid as main cross-condition publication evidence.

@@ -1,0 +1,21 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.6pt}
+\renewcommand{\arraystretch}{1.05}
+\caption{Core label-budget sensitivity results. Normal-only calibration has no anomaly validation labels and therefore cannot use validation macro-F1 threshold tuning. Framework-Label-Budget selected the same model-threshold pairs as Framework-Balanced in these label-budget scenarios, so the rows are merged to avoid implying independent results.}
+\label{tab:label-budget-core}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}p{0.33\linewidth}>{\RaggedRight\arraybackslash}p{0.13\linewidth}*{4}{>{\centering\arraybackslash}p{0.09\linewidth}}@{}}
+\toprule
+Strategy & Label budget & Macro-F1 & PR-AUC & FAR & MDR \\
+\midrule
+Fixed-LightGBM & 5pct & 0.632 & 0.701 & 0.255 & 0.464 \\
+Fixed-LightGBM & 20pct & 0.720 & 0.828 & 0.236 & 0.322 \\
+Fixed-LightGBM & full & 0.887 & 0.955 & 0.115 & 0.111 \\
+Framework-Balanced / Label-Budget & normal\_\allowbreak{}only & 0.558 & 0.574 & 0.439 & 0.438 \\
+Framework-Balanced / Label-Budget & 5pct & 0.639 & 0.712 & 0.197 & 0.503 \\
+Framework-Balanced / Label-Budget & 20pct & 0.715 & 0.829 & 0.199 & 0.363 \\
+Framework-Balanced / Label-Budget & full & 0.888 & 0.954 & 0.115 & 0.109 \\
+\bottomrule
+\end{tabularx}
+\end{table}

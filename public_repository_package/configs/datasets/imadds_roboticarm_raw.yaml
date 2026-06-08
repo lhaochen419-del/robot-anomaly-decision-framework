@@ -1,0 +1,19 @@
+dataset:
+  name: IMAD-DS RoboticArm raw time-window pilot
+  adapter: imadds_roboticarm_raw
+  official_source: https://zenodo.org/records/12665499
+  doi: https://doi.org/10.5281/zenodo.12665499
+  raw_dir: data/raw/imadds/RoboticArm
+  processed_npz: data/processed/imadds_roboticarm_raw/imadds_raw_windows.npz
+  metadata_csv: data/processed/imadds_roboticarm_raw/imadds_raw_windows_metadata.csv
+  segment_length: 512
+  window_size: 128
+  stride: 128
+  seed: 7
+  max_train_source_segments: 600
+  max_train_target_segments: null
+  retain_all_test_segments: true
+  channels: microphone waveform, accelerometer x/y/z, gyroscope x/y/z
+  alignment: per-segment linear resampling to shared normalized time axis
+  split_unit: segment_uid / segment_id / file references
+  status: pilot_raw_window_gate_only

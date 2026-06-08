@@ -1,0 +1,12 @@
+dataset:
+  name: IMAD-DS robotic arm subset
+  adapter: imadds_robotic_arm
+  official_source: https://zenodo.org/records/12665499
+  doi: https://doi.org/10.5281/zenodo.12665499
+  raw_dir: data/raw/imadds/RoboticArm
+  processed_csv: data/processed/imadds_robotic_arm/imadds_robotic_arm_unified.csv
+  robot_platform: scaled industrial robotic arm
+  expected_files: extracted RoboticArm.7z contents
+  expected_channels: microphone, accelerometer, gyroscope streams or derived tabular files
+  conditions: source/target domain, load shifts, background-noise shifts
+  status: NEED_DATA

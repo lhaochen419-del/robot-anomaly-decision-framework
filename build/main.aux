@@ -1,0 +1,122 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\emailauthor{yapengwang@mpu.edu.mo}{Yapeng Wang\corref {cor1}}
+\Newlabel{cor1}{1}
+\Newlabel{aff1}{a}
+\Newlabel{aff2}{b}
+\citation{Chandola2009Survey,Pimentel2014NoveltyDetection,BlazquezGarcia2021TimeSeriesSurvey,Narayanan2018IndustrialArm}
+\citation{Augusti2024IMADDS}
+\citation{Gaiardelli2023RoAD}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}{section.4}\protected@file@percent }
+\citation{Narayanan2018IndustrialArm,Gaiardelli2023RoAD}
+\citation{Augusti2024IMADDS,Gaiardelli2023RoAD}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{3}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Robotic and industrial anomaly diagnosis}{3}{subsection.8}\protected@file@percent }
+\citation{BlazquezGarcia2021TimeSeriesSurvey,Malhotra2016LSTMEncDec,Audibert2020USAD}
+\citation{Malhotra2016LSTMEncDec,Audibert2020USAD}
+\citation{Ke2017LightGBM}
+\citation{Chen2016XGBoost}
+\citation{Breiman2001RandomForests}
+\citation{Liu2008IsolationForest,Liu2012IsolationBased}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Contribution-to-evidence mapping. The table summarizes how each engineering contribution is supported by the protocol design, results and discussion.}}{4}{table.6}\protected@file@percent }
+\newlabel{tab:contribution-evidence}{{1}{4}{Contribution-to-evidence mapping. The table summarizes how each engineering contribution is supported by the protocol design, results and discussion}{table.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Multi-sensor time-series anomaly detection}{4}{subsection.9}\protected@file@percent }
+\citation{Guo2017Calibration,Wu2021TSADBenchmarksFlawed,Tatbul2018PrecisionRecallTS}
+\citation{Vovk2005Conformal,Lei2018Conformal}
+\citation{Sokolova2009PerformanceMeasures,Elkan2001CostSensitive,Drummond2006CostCurves,Sculley2015TechnicalDebt,Breck2017MLTestScore,Amershi2019SE4ML}
+\citation{Augusti2024IMADDS}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Tree-based and statistical baselines}{5}{subsection.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Threshold calibration and leakage-safe evaluation}{5}{subsection.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Deployment-aware engineering evaluation}{5}{subsection.12}\protected@file@percent }
+\citation{Gaiardelli2023RoAD}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Data and Leakage-Safe Protocols}{6}{section.13}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Dataset inclusion and exclusion rationale. The table separates primary evidence from secondary checks and readiness-only datasets.}}{7}{table.15}\protected@file@percent }
+\newlabel{tab:dataset-rationale}{{2}{7}{Dataset inclusion and exclusion rationale. The table separates primary evidence from secondary checks and readiness-only datasets}{table.15}{}}
+\newlabel{tab:dataset-inclusion}{{2}{7}{Dataset inclusion and exclusion rationale. The table separates primary evidence from secondary checks and readiness-only datasets}{table.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Protocol risk and leakage control}{7}{subsection.18}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Experiment design matrix. The table summarizes the main protocol blocks; all blocks use leakage-safe split units and validation-only calibration.}}{8}{table.17}\protected@file@percent }
+\newlabel{tab:experiment-design}{{3}{8}{Experiment design matrix. The table summarizes the main protocol blocks; all blocks use leakage-safe split units and validation-only calibration}{table.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Implementation details and reproducibility}{8}{subsection.19}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Split accounting for the processed IMAD-DS RoboticArm raw-window artifact. Counts are reported at the processed-window level.}}{9}{table.21}\protected@file@percent }
+\newlabel{tab:split-accounting}{{4}{9}{Split accounting for the processed IMAD-DS RoboticArm raw-window artifact. Counts are reported at the processed-window level}{table.21}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Candidate model settings used in the reproducible benchmark implementation. The settings define baseline configurations for model-threshold evaluation rather than optimized architecture claims.}}{11}{table.23}\protected@file@percent }
+\newlabel{tab:model-parameters}{{5}{11}{Candidate model settings used in the reproducible benchmark implementation. The settings define baseline configurations for model-threshold evaluation rather than optimized architecture claims}{table.23}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Benchmark Models and Framework Strategies}{11}{section.26}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Reproducibility configuration and interpretation limits from available artifacts.}}{12}{table.25}\protected@file@percent }
+\newlabel{tab:repro-config}{{6}{12}{Reproducibility configuration and interpretation limits from available artifacts}{table.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Leakage-safe and calibration-aware model-threshold selection workflow. Data are split by segment, file or run unit. Preprocessing is fit on the training split only, model-threshold selection is performed using validation/calibration data only, and held-out test labels are used once for final reporting. The workflow is a decision layer around existing detectors, not a new anomaly score.}}{13}{figure.28}\protected@file@percent }
+\newlabel{fig:framework-workflow}{{1}{13}{Leakage-safe and calibration-aware model-threshold selection workflow. Data are split by segment, file or run unit. Preprocessing is fit on the training split only, model-threshold selection is performed using validation/calibration data only, and held-out test labels are used once for final reporting. The workflow is a decision layer around existing detectors, not a new anomaly score}{figure.28}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Strategy utilities and validation-only selection}{13}{subsection.29}\protected@file@percent }
+\newlabel{eq:validation-selection}{{2}{14}{Strategy utilities and validation-only selection}{equation.31}{}}
+\newlabel{eq:ubalanced}{{3}{14}{Strategy utilities and validation-only selection}{equation.32}{}}
+\newlabel{eq:usafety}{{4}{14}{Strategy utilities and validation-only selection}{equation.33}{}}
+\newlabel{eq:ulowfa}{{5}{14}{Strategy utilities and validation-only selection}{equation.34}{}}
+\newlabel{eq:udeploy}{{6}{14}{Strategy utilities and validation-only selection}{equation.35}{}}
+\newlabel{eq:urobust}{{7}{14}{Strategy utilities and validation-only selection}{equation.36}{}}
+\newlabel{eq:ulabel}{{8}{14}{Strategy utilities and validation-only selection}{equation.37}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Evaluation Metrics and Statistical Analysis}{15}{section.47}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Compressed statistical evidence for prespecified framework-versus-fixed comparisons. Each comparison uses $n=95$ paired scenario-level samples. Unadjusted Wilcoxon $p$-values, effect sizes and wins/losses are retained in the supplementary analysis files generated with this manuscript. Cluster intervals use dataset--protocol group resampling with replacement.}}{16}{table.49}\protected@file@percent }
+\newlabel{tab:statistical-evidence}{{7}{16}{Compressed statistical evidence for prespecified framework-versus-fixed comparisons. Each comparison uses $n=95$ paired scenario-level samples. Unadjusted Wilcoxon $p$-values, effect sizes and wins/losses are retained in the supplementary analysis files generated with this manuscript. Cluster intervals use dataset--protocol group resampling with replacement}{table.49}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Core FAR@95\%Recall summary. The metric reports the false-alarm burden needed to reach a high-recall operating point and is reported from existing strategy summaries rather than used for test-set threshold selection.}}{17}{table.51}\protected@file@percent }
+\newlabel{tab:far95-core}{{8}{17}{Core FAR@95\%Recall summary. The metric reports the false-alarm burden needed to reach a high-recall operating point and is reported from existing strategy summaries rather than used for test-set threshold selection}{table.51}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Results}{17}{section.52}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Overall framework strategy comparison}{17}{subsection.53}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Summary of fixed-model and framework strategies. Oracle-Best-Test-Utility is a theoretical upper bound and is not deployable.}}{18}{table.55}\protected@file@percent }
+\newlabel{tab:main-framework-strategy}{{9}{18}{Summary of fixed-model and framework strategies. Oracle-Best-Test-Utility is a theoretical upper bound and is not deployable}{table.55}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}FAR/MDR operating constraints}{18}{subsection.58}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Core operating evidence for fixed and framework strategies. Colors encode within-column relative desirability and cell values show the reported metric values. For FAR, MDR and regret, lower values are mapped to higher relative desirability; for macro-F1 and PR-AUC, higher values are mapped to higher relative desirability. Color intensity should not be compared across metrics as an absolute value; it only indicates within-metric desirability. Oracle-Best-Test-Utility is a non-deployable retrospective scenario-utility reference rather than a metric-wise oracle.}}{19}{figure.57}\protected@file@percent }
+\newlabel{fig:engineering-utility}{{2}{19}{Core operating evidence for fixed and framework strategies. Colors encode within-column relative desirability and cell values show the reported metric values. For FAR, MDR and regret, lower values are mapped to higher relative desirability; for macro-F1 and PR-AUC, higher values are mapped to higher relative desirability. Color intensity should not be compared across metrics as an absolute value; it only indicates within-metric desirability. Oracle-Best-Test-Utility is a non-deployable retrospective scenario-utility reference rather than a metric-wise oracle}{figure.57}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces FAR/MDR constraint violation rates. Lower violation rates are better; safety and low-false-alarm strategies intentionally trade one error type against the other.}}{20}{table.60}\protected@file@percent }
+\newlabel{tab:far-mdr-constraints}{{10}{20}{FAR/MDR constraint violation rates. Lower violation rates are better; safety and low-false-alarm strategies intentionally trade one error type against the other}{table.60}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Label-budget sensitivity}{20}{subsection.63}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces FAR/MDR constraint violation under the core strategy set used in the main comparison. Balanced, Safety, Low-FA and Deploy denote Framework-Balanced, Framework-Safety, Framework-Low-False-Alarm and Framework-Deployment, respectively. Lower values indicate fewer violations, but safety-oriented and low-false-alarm strategies encode different tradeoffs.}}{21}{figure.62}\protected@file@percent }
+\newlabel{fig:far-mdr-violation}{{3}{21}{FAR/MDR constraint violation under the core strategy set used in the main comparison. Balanced, Safety, Low-FA and Deploy denote Framework-Balanced, Framework-Safety, Framework-Low-False-Alarm and Framework-Deployment, respectively. Lower values indicate fewer violations, but safety-oriented and low-false-alarm strategies encode different tradeoffs}{figure.62}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Robustness and domain shift}{21}{subsection.68}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Core label-budget sensitivity results. Normal-only calibration has no anomaly validation labels and therefore cannot use validation macro-F1 threshold tuning. Framework-Label-Budget selected the same model-threshold pairs as Framework-Balanced in these label-budget scenarios, so the rows are merged to avoid implying independent results.}}{22}{table.65}\protected@file@percent }
+\newlabel{tab:label-budget-core}{{11}{22}{Core label-budget sensitivity results. Normal-only calibration has no anomaly validation labels and therefore cannot use validation macro-F1 threshold tuning. Framework-Label-Budget selected the same model-threshold pairs as Framework-Balanced in these label-budget scenarios, so the rows are merged to avoid implying independent results}{table.65}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Label-budget sensitivity of fixed and framework strategies. The normal-only setting does not use anomaly validation labels and therefore cannot perform validation macro-F1 threshold tuning. Full validation labels remain important; no label-budget advantage is established.}}{22}{figure.67}\protected@file@percent }
+\newlabel{fig:label-budget}{{4}{22}{Label-budget sensitivity of fixed and framework strategies. The normal-only setting does not use anomaly validation labels and therefore cannot perform validation macro-F1 threshold tuning. Full validation labels remain important; no label-budget advantage is established}{figure.67}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Core robustness and domain-shift results. Robustness and domain shift are reported separately because the framework audits domain-shift risk rather than solving it.}}{23}{table.70}\protected@file@percent }
+\newlabel{tab:robustness-domain-core}{{12}{23}{Core robustness and domain-shift results. Robustness and domain shift are reported separately because the framework audits domain-shift risk rather than solving it}{table.70}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Prepared-input prediction latency and deployment-screening evidence}{23}{subsection.71}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Prepared-input prediction latency and deployment-screening summary. The prepared-input deployment-screening utility combines detection metrics with explicit latency and size penalties; it is not a field-deployment validation metric.}}{24}{table.73}\protected@file@percent }
+\newlabel{tab:latency-deployment}{{13}{24}{Prepared-input prediction latency and deployment-screening summary. The prepared-input deployment-screening utility combines detection metrics with explicit latency and size penalties; it is not a field-deployment validation metric}{table.73}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Model selection guidelines}{24}{subsection.76}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Prepared-input prediction latency and deployment-screening utility for core strategies. The scatter plot avoids a dual-axis display; latency values are not end-to-end robot-cell latency and do not include sensor I/O, robot middleware, tree-model feature extraction, alarm handling or operator response.}}{25}{figure.75}\protected@file@percent }
+\newlabel{fig:latency-deployment}{{5}{25}{Prepared-input prediction latency and deployment-screening utility for core strategies. The scatter plot avoids a dual-axis display; latency values are not end-to-end robot-cell latency and do not include sensor I/O, robot middleware, tree-model feature extraction, alarm handling or operator response}{figure.75}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Engineering Discussion}{25}{section.79}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Compressed application scenario mapping for operating-objective-specific strategy selection.}}{26}{table.78}\protected@file@percent }
+\newlabel{tab:application-scenario}{{14}{26}{Compressed application scenario mapping for operating-objective-specific strategy selection}{table.78}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Answers to the research questions}{27}{subsection.80}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Limitations and Threats to Validity}{27}{section.81}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{28}{section.82}\protected@file@percent }
+\bibstyle{elsarticle-num}
+\bibdata{references_v20}
+\bibcite{Chandola2009Survey}{{1}{}{{}}{{}}}
+\bibcite{Pimentel2014NoveltyDetection}{{2}{}{{}}{{}}}
+\bibcite{BlazquezGarcia2021TimeSeriesSurvey}{{3}{}{{}}{{}}}
+\bibcite{Narayanan2018IndustrialArm}{{4}{}{{}}{{}}}
+\bibcite{Augusti2024IMADDS}{{5}{}{{}}{{}}}
+\bibcite{Gaiardelli2023RoAD}{{6}{}{{}}{{}}}
+\bibcite{Malhotra2016LSTMEncDec}{{7}{}{{}}{{}}}
+\bibcite{Audibert2020USAD}{{8}{}{{}}{{}}}
+\bibcite{Ke2017LightGBM}{{9}{}{{}}{{}}}
+\bibcite{Chen2016XGBoost}{{10}{}{{}}{{}}}
+\bibcite{Breiman2001RandomForests}{{11}{}{{}}{{}}}
+\bibcite{Liu2008IsolationForest}{{12}{}{{}}{{}}}
+\bibcite{Liu2012IsolationBased}{{13}{}{{}}{{}}}
+\bibcite{Guo2017Calibration}{{14}{}{{}}{{}}}
+\bibcite{Wu2021TSADBenchmarksFlawed}{{15}{}{{}}{{}}}
+\bibcite{Tatbul2018PrecisionRecallTS}{{16}{}{{}}{{}}}
+\bibcite{Vovk2005Conformal}{{17}{}{{}}{{}}}
+\bibcite{Lei2018Conformal}{{18}{}{{}}{{}}}
+\bibcite{Sokolova2009PerformanceMeasures}{{19}{}{{}}{{}}}
+\bibcite{Elkan2001CostSensitive}{{20}{}{{}}{{}}}
+\bibcite{Drummond2006CostCurves}{{21}{}{{}}{{}}}
+\bibcite{Sculley2015TechnicalDebt}{{22}{}{{}}{{}}}
+\bibcite{Breck2017MLTestScore}{{23}{}{{}}{{}}}
+\bibcite{Amershi2019SE4ML}{{24}{}{{}}{{}}}
+\providecommand\NAT@force@numbers{}\NAT@force@numbers
+\gdef \@abspage@last{32}

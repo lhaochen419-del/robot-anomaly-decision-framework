@@ -1,0 +1,21 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.8pt}
+\renewcommand{\arraystretch}{1.05}
+\caption{Core FAR@95\%Recall summary. The metric reports the false-alarm burden needed to reach a high-recall operating point and is reported from existing strategy summaries rather than used for test-set threshold selection.}
+\label{tab:far95-core}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}X*{4}{>{\centering\arraybackslash}p{0.105\linewidth}}@{}}
+\toprule
+Strategy & \shortstack{FAR@95\%\\Recall} & Std. & Macro-F1 & PR-AUC \\
+\midrule
+Framework-Balanced & 0.480 & 0.346 & 0.773 & 0.861 \\
+Framework-Safety & 0.479 & 0.348 & 0.738 & 0.858 \\
+Framework-Low-False-Alarm & 0.488 & 0.342 & 0.750 & 0.859 \\
+Framework-Deployment & 0.485 & 0.345 & 0.770 & 0.859 \\
+Fixed-LightGBM & 0.482 & 0.325 & 0.785 & 0.877 \\
+Fixed-XGBoost & 0.515 & 0.309 & 0.761 & 0.861 \\
+Fixed-RandomForest & 0.517 & 0.340 & 0.744 & 0.835 \\
+\bottomrule
+\end{tabularx}
+\end{table}
